@@ -1,0 +1,42 @@
+version: "3.1"
+
+nlu:
+- intent: cumprimentar
+  examples: |
+    - oi
+    - olá
+    - e aí?
+    - bom dia
+    - boa tarde
+    - boa noite
+
+- intent: despedida
+  examples: |
+    - tchau
+    - até mais
+    - até logo
+    - falou
+    - até a próxima
+
+- intent: humor_feliz
+  examples: |
+    - estou feliz
+    - tudo ótimo
+    - maravilhoso
+    - muito bem
+    - estou animado
+
+- intent: humor_triste
+  examples: |
+    - estou triste
+    - não estou bem
+    - péssimo
+    - estou mal
+    - muito ruim
+
+- intent: desafio_bot
+  examples: |
+    - você é um bot?
+    - você é humano?
+    - quem é você?
+ 

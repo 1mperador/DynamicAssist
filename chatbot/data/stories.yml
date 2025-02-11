@@ -1,0 +1,29 @@
+version: "3.1"
+
+stories:
+- story: conversa_feliz
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar
+  - intent: humor_feliz
+  - action: utter_feliz
+
+- story: conversa_triste
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar
+  - intent: humor_triste
+  - action: utter_triste
+
+- story: despedida
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
+- story: desafio_bot
+  steps:
+  - user: |
+      voce é um bot?
+  - intent: desafio_bot
+  - action: utter_desafio_bot
+

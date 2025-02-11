@@ -20,3 +20,15 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
+## Chatbot ##
+__pycache__/
+*.pyc
+*.pyo
+*.db
+*.log
+.env
+venv/
+rasa_env/
+models/
+note.txt

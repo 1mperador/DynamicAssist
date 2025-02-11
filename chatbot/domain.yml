@@ -1,0 +1,28 @@
+version: "3.1"
+
+intents:
+  - cumprimentar
+  - despedida
+  - humor_feliz
+  - humor_triste
+  - desafio_bot
+
+responses:
+  utter_cumprimentar:
+    - text: "Olá! Como posso te ajudar?"
+
+  utter_despedida:
+    - text: "Tchau! Até mais!"
+
+  utter_feliz:
+    - text: "Que bom! Fico feliz por você. 😊"
+
+  utter_triste:
+    - text: "Poxa, sinto muito. Se precisar conversar, estou aqui."
+
+  utter_desafio_bot:
+    - text: "Eu sou um assistente virtual feito com Rasa!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
