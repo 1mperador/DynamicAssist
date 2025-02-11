@@ -14,4 +14,3 @@
 3. Interação básica com arquivos 
 	- Mover arquivos
 	- Verificar integridade do arquivo
-
