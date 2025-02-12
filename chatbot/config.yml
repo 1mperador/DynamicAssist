@@ -1,0 +1,23 @@
+version: "3.1"
+recipe: default.v1
+
+# The assistant project unique identifier
+assistant_id: 20250207-183816-brutal-overtone
+
+# Configuration for Rasa NLU.
+language: pt
+
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: CountVectorsFeaturizer
+  - name: DIETClassifier
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+  - name: FallbackClassifier
+
+# Configuration for Rasa Core.
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+  - name: RulePolicy

@@ -1,0 +1,28 @@
+version: "3.1"
+
+stories:
+- story: Conversa feliz
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar
+  - intent: humor_feliz
+  - action: utter_feliz
+
+- story: Conversa triste
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar
+  - intent: humor_triste
+  - action: utter_triste
+  - action: utter_ajuda
+
+- story: despedida
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
+- story: desafio_bot
+  steps:
+  - intent: desafio_bot
+  - action: utter_desafio_bot
+

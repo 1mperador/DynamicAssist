@@ -1,0 +1,34 @@
+version: "3.1"
+
+rules:
+
+- rule: Responder a um cumprimento
+  steps:
+  - intent: cumprimentar
+  - action: utter_cumprimentar
+
+- rule: Responder a uma despedida
+  steps:
+  - intent: despedida
+  - action: utter_despedida
+
+- rule: Responder a um usuário feliz
+  steps:
+  - intent: humor_feliz
+  - action: utter_feliz
+
+- rule: Responder a um usuário triste
+  steps:
+  - intent: humor_triste
+  - action: utter_triste
+  - action: utter_ajuda
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_despedida
+
+- rule: Responder ao desafio de ser um bot
+  steps:
+  - intent: desafio_bot
+  - action: utter_desafio_bot
