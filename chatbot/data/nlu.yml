@@ -20,23 +20,27 @@ nlu:
 
 - intent: humor_feliz
   examples: |
-    - estou feliz
-    - tudo ótimo
-    - maravilhoso
-    - muito bem
-    - estou animado
+    - Estou feliz
+    - Estou muito bem
+    - Que dia incrível!
+    - Maravilhoso, obrigado
 
 - intent: humor_triste
   examples: |
-    - estou triste
-    - não estou bem
-    - péssimo
-    - estou mal
-    - muito ruim
+    - Estou triste
+    - Não estou bem
+    - Hoje foi um dia ruim
+    - Me sinto mal
+    - Estou chateado
+    - Tive um dia péssimo
+    - Poxa, estou mal
+    - Estou deprimido
+    - Nada está dando certo
 
 - intent: desafio_bot
   examples: |
     - você é um bot?
     - você é humano?
     - quem é você?
- 
+    - você é real?
+    - você é uma máquina?
