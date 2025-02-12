@@ -9,7 +9,7 @@ Este projeto implementa um chatbot utilizando o framework Rasa. O chatbot é cap
 1. Clone este repositório:
 
 ```bash 
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/1mperador/DynamicAssist.git
 ```
 
 2. Instale as dependências do projeto:
