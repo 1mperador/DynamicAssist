@@ -6,6 +6,10 @@ intents:
   - humor_feliz
   - humor_triste
   - desafio_bot
+  - perguntar_gemma
+
+actions:
+  - action_call_gemma
 
 responses:
   utter_cumprimentar:
