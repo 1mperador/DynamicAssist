@@ -1,5 +1,7 @@
 import requests
 import pyttsx3
+import readline
+from termcolor import colored
 
 def send_message_to_rasa(message):
     url = "http://localhost:5005/webhooks/rest/webhook"  # URL do servidor Rasa
@@ -14,32 +16,31 @@ def send_message_to_rasa(message):
 
 def speak(text):
     engine = pyttsx3.init()
-    
-    # Ajustar a taxa de fala
-    rate = engine.getProperty('rate')
-    engine.setProperty('rate', rate - 50)  # Reduzir a taxa de fala
-    
-    # Ajustar o volume
-    volume = engine.getProperty('volume')
-    engine.setProperty('volume', 1.0)  # Volume máximo
-    
-    # Selecionar uma voz diferente (opcional)
+    engine.setProperty('rate', 130)  
+    engine.setProperty('volume', 1.0)  
     voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[1].id)  # Selecionar a voz com índice 1
-    
+    for voice in voices:
+        if "brazil" in voice.id.lower():
+            engine.setProperty('voice', voice.id)
+            break  
     engine.say(text)
-    engine.runAndWait()  # Espera a fala terminar
-    engine.stop()  # Para o motor de fala corretamente
+    engine.runAndWait()
+    engine.stop()
 
 def main():
-    print("Assistente ativada! Digite sua pergunta.")
+    print(colored("\n=================================", "cyan"))
+    print(colored("     ASSISTENTE VIRTUAL IA", "green"))
+    print(colored("=================================\n", "cyan"))
+    print(colored("Digite sua pergunta ou 'sair' para encerrar.", "yellow"))
+    
     while True:
-        user_input = input("Você: ")
+        user_input = input(colored("\nVocê: ", "blue"))
         if user_input.lower() in ["sair", "exit", "quit"]:
-            print("Encerrando...")
+            print(colored("Encerrando...", "red"))
+            speak("Encerrando o sistema.")
             break
         response = send_message_to_rasa(user_input)
-        print(f"Assistente: {response}")
+        print(colored(f"Assistente: {response}", "magenta"))
         speak(response)
 
 if __name__ == "__main__":

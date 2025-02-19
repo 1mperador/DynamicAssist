@@ -45,6 +45,7 @@ nlu:
     - você é real?
     - você é uma máquina?
 
+# Pergunta pra IA
 - intent: perguntar_gemma
   examples: |
     - Quem é Gemma?
