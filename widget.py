@@ -1,3 +1,4 @@
+
 import os
 import tkinter as tk
 
@@ -10,7 +11,7 @@ def toggle_terminal():
         os.system("sleep 1 && wmctrl -r Alacritty -e 0,1300,750,400,300")
 
 root = tk.Tk()
-root.geometry("50x50+1400+800")  # Define posição
+root.geometry("50x50+970+718") # Define posição
 root.overrideredirect(True)  # Remove bordas
 root.attributes("-topmost", True)  # Mantém no topo
 

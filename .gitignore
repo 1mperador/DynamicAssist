@@ -32,3 +32,4 @@ venv/
 rasa_env/
 models/
 note.txt
+log.txt
