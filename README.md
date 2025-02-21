@@ -1,4 +1,4 @@
-# DynamicAssist 
+![personaliz](https://github.com/user-attachments/assets/80017dc9-1508-4cd3-962b-dff03f13757c)# DynamicAssist 
 Este projeto implementa um chatbot utilizando o framework Rasa. O chatbot é capaz de responder perguntas e interagir com os usuários de forma dinâmica, tendo iterface para minimizar quando a conversa acabar.
 
 
@@ -11,6 +11,7 @@ Este projeto implementa um chatbot utilizando o framework Rasa. O chatbot é cap
 ### Configuração de Icone
 Para o meu monitor que de 1024x768 60hz, o `root.geometry` encontrado no `widget` é de ("50x50+970+718"), mais pode variar de monitor.
 
+![personaliz](https://github.com/user-attachments/assets/a094a6c3-7197-4177-8a9a-3d900ee1f80a)
 
 ### Configuração no systemd
 Assim que instalar lembrar de reiniciar:
