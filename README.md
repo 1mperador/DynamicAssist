@@ -23,6 +23,13 @@ Para o meu monitor que de 1024x768 60hz, o `root.geometry` encontrado no `widget
 
 ![personaliz](https://github.com/user-attachments/assets/a094a6c3-7197-4177-8a9a-3d900ee1f80a)
 
+### Terminal Personlizado
+Ao clicar no Icone no canto da tela abre um terminal, que se não quiser basta digitar "sair"
+
+![termianl](https://github.com/user-attachments/assets/7798545c-0088-4f33-9897-99eec7fc9e6d)
+
+
+
 ### Configuração no systemd
 Assim que instalar lembrar de reiniciar:
 ```bash
