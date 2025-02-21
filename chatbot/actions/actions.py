@@ -1,27 +1,29 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
+import requests
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+import json
 
+class ActionCallGemma(Action):
+    def name(self):
+        return "action_call_gemma"
 
-# This is a simple example for a custom action which utters "Hello World!"
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain):
+        user_message = tracker.latest_message.get("text")
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+        response = requests.post(
+            "http://localhost:11434/api/generate",
+            json={"model": "gemma", "prompt": user_message}
+        )
+
+        print("Resposta da API:", response.text)  # <-- Adicione esta linha para debug
+
+        if response.status_code == 200:
+            responses = response.text.strip().split("\n")  # Divide a resposta em múltiplas linhas de JSON
+            responses = [json.loads(r) for r in responses]  # Converte cada linha em um dicionário Python
+            gemma_reply = " ".join([r.get("response", "") for r in responses])  # Junta todas as partes da resposta
+
+        else:
+            gemma_reply = "Erro ao se conectar com Gemma."
+
+        dispatcher.utter_message(text=gemma_reply)
+        return []

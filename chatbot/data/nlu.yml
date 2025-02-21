@@ -44,3 +44,15 @@ nlu:
     - quem é você?
     - você é real?
     - você é uma máquina?
+
+# Pergunta pra IA
+- intent: perguntar_gemma
+  examples: |
+    - Quem é Gemma?
+    - O que é Gemma?
+    - O que faz Gemma?
+    - Como funciona Gemma?
+    - Como Gemma funciona?
+    - O que Gemma faz?
+    - O que Gemma é?
+    - Explique a teoria da relatividade de forma simples.
