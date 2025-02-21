@@ -1,6 +1,16 @@
-![personaliz](https://github.com/user-attachments/assets/80017dc9-1508-4cd3-962b-dff03f13757c)# DynamicAssist 
+```
+ _____                              _                       _     _   
+|  __ \                            (_)        /\           (_)   | |     Tecnlogias: Framework Rasa, Ollama Gamma
+| |  | |_   _ _ __   __ _ _ __ ___  _  ___   /  \   ___ ___ _ ___| |_    Sistema Operacional: feito no Linux
+| |  | | | | | '_ \ / _` | '_ ` _ \| |/ __| / /\ \ / __/ __| / __| __|   Python: 3.10.12
+| |__| | |_| | | | | (_| | | | | | | | (__ / ____ \\__ \__ \ \__ \ |_ 
+|_____/ \__, |_| |_|\__,_|_| |_| |_|_|\___/_/    \_\___/___/_|___/\__|
+         __/ |                                                        
+        |___/          
+```
 Este projeto implementa um chatbot utilizando o framework Rasa. O chatbot é capaz de responder perguntas e interagir com os usuários de forma dinâmica, tendo iterface para minimizar quando a conversa acabar.
 
+---
 
 ### Funcionalidades
 - Recebe entradas de texto e gera respostas automatizadas.
