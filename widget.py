@@ -1,4 +1,3 @@
-
 import os
 import tkinter as tk
 
@@ -9,6 +8,8 @@ def toggle_terminal():
     else:
         os.system("alacritty -e bash -c 'python3 /home/leugim/Documentos/GitHub/DynamicAssist/test.py' &")
         os.system("sleep 1 && wmctrl -r Alacritty -e 0,1300,750,400,300")
+
+url = 'http://localhost:5005/webhooks/rest/webhook'
 
 root = tk.Tk()
 root.geometry("50x50+970+718") # Define posição
