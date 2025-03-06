@@ -1,6 +1,8 @@
+#! /usr/bin/python3 
 import os
 import tkinter as tk
 
+ 
 def toggle_terminal():
     status = os.popen("wmctrl -l | grep Alacritty").read()
     if status:
