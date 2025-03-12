@@ -1,7 +1,21 @@
 import requests
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
 import json
+
+
+class ActionSaudacaoComNome(Action):
+    def name(self) -> str:
+        return "action_saudacao_com_nome"
+
+    def run(self, dispatcher, tracker, domain):
+        nome = tracker.get_slot("nome")
+        if nome:
+            dispatcher.utter_message(text=f"Olá, {nome}! Como posso te ajudar hoje?")
+        else:
+            dispatcher.utter_message(text="Olá! Como posso te ajudar hoje?")
+        return [SlotSet("nome", nome)]  # Garantir que o slot 'nome' seja mantido
 
 class ActionCallGemma(Action):
     def name(self):

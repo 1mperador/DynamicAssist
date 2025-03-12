@@ -1,0 +1,17 @@
+services:
+  rasa:
+    image: rasa/rasa:latest
+    container_name: rasa_bot
+    ports:
+      - "5006:5005"
+    volumes:
+      - ./chatbot/.rasa:/app  # <-- Ajuste do caminho relativo
+    command: ["run", "--enable-api", "--cors", "*"]
+
+  action_server:
+    image: rasa/rasa-sdk:latest
+    container_name: rasa_actions
+    volumes:
+      - ./chatbot/actions:/app/actions  # <-- Ajuste do caminho relativo
+    ports:
+      - "5056:5055"

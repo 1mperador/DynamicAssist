@@ -56,3 +56,11 @@ nlu:
     - O que Gemma faz?
     - O que Gemma é?
     - Explique a teoria da relatividade de forma simples.
+
+- intent: fornecer_nome
+  examples: |
+    - Meu nome é [Leugim](nome)
+    - Sou o [Pedro](nome)
+    - Me chamo [Maria](nome)
+    - Pode me chamar de [João](nome)
+    - Meu nome é [Ana](nome)
