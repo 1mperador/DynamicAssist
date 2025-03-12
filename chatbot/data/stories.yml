@@ -26,3 +26,9 @@ stories:
   - intent: desafio_bot
   - action: utter_desafio_bot
 
+- story: saudacao com nome
+  steps:
+  - intent: fornecer_nome
+    entities:
+    - nome: "Leugim"
+  - action: utter_saudacao_com_nome

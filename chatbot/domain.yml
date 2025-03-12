@@ -7,9 +7,42 @@ intents:
   - humor_triste
   - desafio_bot
   - perguntar_gemma
+  - fornecer_nome
+  - utter_saudacao_com_nome
+  - action_listen
+  - action_restart
+  - action_session_start
+  - action_default_fallback
+  - action_default_ask_affirmation
+  - action_default_ask_rephrase
+  - action_two_stage_fallback
+  - action_unlikely_intent
+  - action_back
+  - action_extract_slots
+  - action_call_gemma
+  - action_1
+  - action_2
+
+entities:
+  - nome
+
+slots:
+  nome:
+    type: text
+    influence_conversation: false # Garantir que o slot não influencie a conversa
+    mappings:
+      - type: from_entity
+        entity: nome
 
 actions:
+  - utter_saudacao_com_nome
   - action_call_gemma
+  - action_saudacao_com_nome
+  - action_1
+  - action_2
+
+custom_actions:
+  - action_saudacao_com_nome
 
 responses:
   utter_cumprimentar:
@@ -29,6 +62,11 @@ responses:
 
   utter_ajuda: 
     - text: "Claro! Como posso te ajudar?"
+
+  utter_saudacao_com_nome:
+    - text: "Olá, {nome}, como posso ajudar?"
+    - text: "Oi, {nome}, em que posso te ajudar?"
+    - text: "Olá, tudo bem, {nome}? Como posso te auxiliar?"
 
 session_config:
   session_expiration_time: 60

@@ -1,0 +1,71 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "action_1": 0,
+        "action_2": 1,
+        "action_back": 2,
+        "action_call_gemma": 3,
+        "action_default_ask_affirmation": 4,
+        "action_default_ask_rephrase": 5,
+        "action_default_fallback": 6,
+        "action_extract_slots": 7,
+        "action_listen": 8,
+        "action_restart": 9,
+        "action_session_start": 10,
+        "action_two_stage_fallback": 11,
+        "action_unlikely_intent": 12,
+        "back": 13,
+        "cumprimentar": 14,
+        "desafio_bot": 15,
+        "despedida": 16,
+        "fornecer_nome": 17,
+        "humor_feliz": 18,
+        "humor_triste": 19,
+        "nlu_fallback": 20,
+        "out_of_scope": 21,
+        "perguntar_gemma": 22,
+        "restart": 23,
+        "session_start": 24,
+        "utter_saudacao_com_nome": 25
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_saudacao_com_nome": 13,
+        "action_call_gemma": 14,
+        "action_1": 15,
+        "action_2": 16,
+        "utter_ajuda": 17,
+        "utter_cumprimentar": 18,
+        "utter_desafio_bot": 19,
+        "utter_despedida": 20,
+        "utter_feliz": 21,
+        "utter_triste": 22
+      },
+      "entities": {
+        "nome": 0
+      },
+      "slots": {
+        "nome_0": 0
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": null
+}
