@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QTextEdit, QPushButton
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QTextEdit, QPushButton, QMainWindow
 from PyQt5.QtCore import Qt, QPropertyAnimation, QRect, QTimer, QProcess
 from PyQt5.QtGui import QPalette, QColor, QPainter, QPen
 
@@ -42,30 +42,50 @@ class PainelFlutuante(QWidget):
         painter.setPen(pen)
         painter.drawRect(0, 0, self.width() - 1, self.height() - 1)
 
-class PainelBtop(PainelFlutuante):
-    def __init__(self, titulo, cor_inicial):
-        super().__init__(titulo, cor_inicial)
+class PainelBtop(QMainWindow):
+    def __init__(self):
+        super().__init__()
 
-        layout = QVBoxLayout(self)
+        # Janela sem bordas e com fundo transparente
+        self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
 
-        self.output = QTextEdit()
-        self.output.setReadOnly(True)
-        self.output.setStyleSheet("background-color: #000; color: #0f0; font-family: monospace; font-size: 12px;")
+        # Define a posição e tamanho (como você indicou)
+        self.setGeometry(-500, 600, 400, 300)
 
-        layout.addWidget(self.output)
-        self.setLayout(layout)
-
-        # Processo que executa o btop
+        # Inicia o terminal com btop
         self.processo = QProcess(self)
-        self.processo.setProcessChannelMode(QProcess.MergedChannels)  # Junta stdout e stderr
-        self.processo.readyReadStandardOutput.connect(self.ler_saida)
+        self.processo.setProgram("alacritty")  # ou outro terminal como gnome-terminal, xterm, etc.
+        self.processo.setArguments(["-e", "btop"])  # -e executa o comando dentro do terminal
+        self.processo.start()
 
-        self.processo.start("btop")  # Assumindo que btop está instalado no sistema
+        # Mostra a janela
+        self.show()
 
-    def ler_saida(self):
-        saida = bytes(self.processo.readAllStandardOutput()).decode("utf-8", errors="ignore")
-        self.output.setPlainText(saida)  # Sobrescreve tudo (pois btop redesenha sempre)
-        self.output.verticalScrollBar().setValue(0)  # Mantém no topo
+# class PainelBtop(PainelFlutuante):
+#     def __init__(self, titulo, cor_inicial):
+#         super().__init__(titulo, cor_inicial)
+
+#         layout = QVBoxLayout(self)
+
+#         self.output = QTextEdit()
+#         self.output.setReadOnly(True)
+#         self.output.setStyleSheet("background-color: #000; color: #0f0; font-family: monospace; font-size: 12px;")
+
+#         layout.addWidget(self.output)
+#         self.setLayout(layout)
+
+#         # Processo que executa o btop
+#         self.processo = QProcess(self)
+#         self.processo.setProcessChannelMode(QProcess.MergedChannels)  # Junta stdout e stderr
+#         self.processo.readyReadStandardOutput.connect(self.ler_saida)
+
+#         self.processo.start("btop")  # Assumindo que btop está instalado no sistema
+
+#     def ler_saida(self):
+#         saida = bytes(self.processo.readAllStandardOutput()).decode("utf-8", errors="ignore")
+#         self.output.setPlainText(saida)  # Sobrescreve tudo (pois btop redesenha sempre)
+#         self.output.verticalScrollBar().setValue(0)  # Mantém no topo
 
 
 class PainelTerminal(PainelFlutuante):
@@ -150,9 +170,11 @@ class MainApp(QApplication):
         self.fixa.show()
 
         # Painel de diagnóstico com btop
-        self.btop_painel = PainelBtop("Diagnóstico", QColor("#1c1c1c"))
-        self.btop_painel.setGeometry(600, 100, 600, 400)
-        self.btop_painel.show()
+        # self.btop_painel = PainelBtop("Diagnóstico", QColor("#1c1c1c"))
+        # self.btop_painel.setGeometry(-500, 600, 400, 300)
+        # self.btop_painel.show()
+
+        self.btop_painel = PainelBtop()
 
 
     def mover_paineis(self):
