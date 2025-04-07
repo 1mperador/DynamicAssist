@@ -90,3 +90,45 @@ if __name__ == "__main__":
     janela = AssistenteUI()
     janela.show()
     sys.exit(app.exec())
+
+
+# ---------------------------------------------------------------------------------------------
+
+class PainelFlutuante(QWidget):
+    def __init__(self, titulo, cor_inicial):
+        super().__init__()
+        self.setWindowTitle(titulo)
+        self.setGeometry(100, 100, 250, 150)
+        self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
+
+        self.setAutoFillBackground(True)
+        self.atualizar_cor(cor_inicial)
+
+        self.label = QLabel(titulo, self)
+        self.label.setAlignment(Qt.AlignCenter)
+        self.label.setStyleSheet("color: white; font-size: 18px;")
+        self.label.setGeometry(0, 40, 250, 50)
+
+        self.animacao = QPropertyAnimation(self, b"geometry")
+
+    def atualizar_cor(self, cor):
+        palette = self.palette()
+        palette.setColor(QPalette.Window, cor)
+        self.setPalette(palette)
+
+    def mover_para(self, x, y):
+        atual = self.geometry()
+        novo = QRect(x, y, atual.width(), atual.height())
+        self.animacao.stop()
+        self.animacao.setDuration(500)
+        self.animacao.setStartValue(atual)
+        self.animacao.setEndValue(novo)
+        self.animacao.start()
+
+    def paintEvent(self, event):
+        super().paintEvent(event)
+        painter = QPainter(self)
+        pen = QPen(QColor("#9b59b6"))  # Roxo neon
+        pen.setWidth(4)
+        painter.setPen(pen)
+        painter.drawRect(0, 0, self.width() - 1, self.height() - 1)
