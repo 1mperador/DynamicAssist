@@ -2,6 +2,8 @@ import requests
 import pyttsx3
 import readline
 from termcolor import colored
+import subprocess
+import os
 
 def send_message_to_rasa(message):
     url = "http://localhost:5005/webhooks/rest/webhook"  # URL do servidor Rasa
