@@ -16,7 +16,7 @@ Este projeto implementa um chatbot utilizando o framework Rasa. O chatbot é cap
 - Recebe entradas de texto e gera respostas automatizadas.
 - Pode ser integrado com diferentes plataformas de comunicação.
 - Permite treinamento de modelos de linguagem personalizados.
-- Funciona por `systemd` sendo iniciado pelo `start_assistente.sh` assim que sua maquina estiver ligada.
+- Funciona por `systemd` iniciando o `rasa` e o `widget`.
 
 ### Configuração de Icone
 Para o meu monitor que de 1024x768 60hz, o `root.geometry` encontrado no `widget` é de ("50x50+970+718"), mais pode variar de monitor.
