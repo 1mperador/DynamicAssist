@@ -22,6 +22,18 @@ intents:
   - action_call_gemma
   - action_1
   - action_2
+  - agradecer
+  - perguntar_hora
+  - perguntar_data
+  - ver_status_servidor
+  - atualizar_sistema
+  - verificar_tempo
+  - abrir_calculadora
+  - abrir_navegador
+  - reiniciar_servidor
+  - elogiar
+  - perguntar_nome
+  - modo_debug
 
 entities:
   - nome
@@ -40,6 +52,14 @@ actions:
   - action_saudacao_com_nome
   - action_1
   - action_2
+  - action_ver_status_servidor
+  - action_atualizar_sistema
+  - action_reiniciar_servidor
+  - action_dizer_hora
+  - action_dizer_data
+  - action_abrir_calculadora
+  - action_abrir_navegador
+  - action_verificar_tempo
 
 custom_actions:
   - action_saudacao_com_nome
@@ -47,6 +67,7 @@ custom_actions:
 responses:
   utter_cumprimentar:
     - text: "Olá! Como posso te ajudar?"
+    - text: "Oi Senhor, Como posso ajudar?"
 
   utter_despedida:
     - text: "Tchau! Até mais!"
@@ -67,6 +88,17 @@ responses:
     - text: "Olá, {nome}, como posso ajudar?"
     - text: "Oi, {nome}, em que posso te ajudar?"
     - text: "Olá, tudo bem, {nome}? Como posso te auxiliar?"
+  
+  utter_agradecer:
+    - text: "De nada! Estou aqui pra ajudar."
+  utter_perguntar_nome:
+    - text: "Sou sua assistente virtual. Fui criada para te ajudar no que for possível!"
+  utter_elogiar:
+    - text: "Muito obrigada! Fico feliz em ajudar."
+  utter_verificar_tempo:
+    - text: "Vou verificar a previsão do tempo, só um momento..."
+  utter_modo_debug:
+    - text: "Modo debug ativado. Logs detalhados serão exibidos."
 
 session_config:
   session_expiration_time: 60

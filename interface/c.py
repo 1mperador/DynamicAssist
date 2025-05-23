@@ -42,25 +42,25 @@ class PainelFlutuante(QWidget):
         painter.setPen(pen)
         painter.drawRect(0, 0, self.width() - 1, self.height() - 1)
 
-class PainelBtop(QMainWindow):
-    def __init__(self):
-        super().__init__()
+# class PainelBtop(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
 
-        # Janela sem bordas e com fundo transparente
-        self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
-        self.setAttribute(Qt.WA_TranslucentBackground)
+#         # Janela sem bordas e com fundo transparente
+#         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
+#         self.setAttribute(Qt.WA_TranslucentBackground)
 
-        # Define a posição e tamanho (como você indicou)
-        self.setGeometry(-500, 600, 400, 300)
+#         # Define a posição e tamanho (como você indicou)
+#         self.setGeometry(-500, 600, 400, 300)
 
-        # Inicia o terminal com btop
-        self.processo = QProcess(self)
-        self.processo.setProgram("alacritty")  # ou outro terminal como gnome-terminal, xterm, etc.
-        self.processo.setArguments(["-e", "btop"])  # -e executa o comando dentro do terminal
-        self.processo.start()
+#         # Inicia o terminal com btop
+#         self.processo = QProcess(self)
+#         self.processo.setProgram("alacritty")  # ou outro terminal como gnome-terminal, xterm, etc.
+#         self.processo.setArguments(["-e", "btop"])  # -e executa o comando dentro do terminal
+#         self.processo.start()
 
-        # Mostra a janela
-        self.show()
+#         # Mostra a janela
+#         self.show()
 
 # class PainelBtop(PainelFlutuante):
 #     def __init__(self, titulo, cor_inicial):
@@ -174,7 +174,7 @@ class MainApp(QApplication):
         # self.btop_painel.setGeometry(-500, 600, 400, 300)
         # self.btop_painel.show()
 
-        self.btop_painel = PainelBtop()
+        # self.btop_painel = PainelBtop()
 
 
     def mover_paineis(self):

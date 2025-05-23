@@ -1,0 +1,21 @@
+{
+  "0": "abrir_calculadora",
+  "1": "abrir_navegador",
+  "2": "agradecer",
+  "3": "atualizar_sistema",
+  "4": "cumprimentar",
+  "5": "desafio_bot",
+  "6": "despedida",
+  "7": "elogiar",
+  "8": "fornecer_nome",
+  "9": "humor_feliz",
+  "10": "humor_triste",
+  "11": "modo_debug",
+  "12": "perguntar_data",
+  "13": "perguntar_gemma",
+  "14": "perguntar_hora",
+  "15": "perguntar_nome",
+  "16": "reiniciar_servidor",
+  "17": "ver_status_servidor",
+  "18": "verificar_tempo"
+}

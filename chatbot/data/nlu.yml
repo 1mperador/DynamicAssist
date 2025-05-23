@@ -3,7 +3,8 @@ version: "3.1"
 nlu:
 - intent: cumprimentar
   examples: |
-    - oi
+    - oi assistente
+    - oi computador
     - olá
     - e aí?
     - bom dia
@@ -64,3 +65,84 @@ nlu:
     - Me chamo [Maria](nome)
     - Pode me chamar de [João](nome)
     - Meu nome é [Ana](nome)
+
+- intent: agradecer
+  examples: |
+    - obrigado
+    - valeu
+    - muito obrigado
+    - agradeço
+
+- intent: perguntar_hora
+  examples: |
+    - que horas são?
+    - me diga a hora
+    - qual é a hora agora?
+    - pode me dizer a hora?
+
+- intent: perguntar_data
+  examples: |
+    - que dia é hoje?
+    - qual a data de hoje?
+    - me diga a data
+    - hoje é que dia?
+
+- intent: ver_status_servidor
+  examples: |
+    - como está o servidor?
+    - me diga o status do servidor
+    - o servidor está ligado?
+    - servidor funcionando?
+
+- intent: atualizar_sistema
+  examples: |
+    - atualize o sistema
+    - faça update no servidor
+    - atualiza os pacotes
+    - rode o apt update
+
+- intent: verificar_tempo
+  examples: |
+    - como está o tempo?
+    - vai chover hoje?
+    - previsão do tempo
+    - está frio?
+
+- intent: abrir_calculadora
+  examples: |
+    - abra a calculadora
+    - quero fazer uma conta
+    - iniciar calculadora
+    - abre a calculadora aí
+
+- intent: abrir_navegador
+  examples: |
+    - abra o navegador
+    - quero acessar a internet
+    - iniciar navegador
+    - abra o chrome
+
+- intent: reiniciar_servidor
+  examples: |
+    - reinicie o servidor
+    - quero reiniciar a máquina remota
+    - reiniciar sistema remoto
+
+- intent: elogiar
+  examples: |
+    - você é ótima
+    - parabéns
+    - gostei de você
+    - muito inteligente
+
+- intent: perguntar_nome
+  examples: |
+    - qual o seu nome?
+    - como você se chama?
+    - quem é você?
+
+- intent: modo_debug
+  examples: |
+    - ative o modo debug
+    - entra no modo desenvolvedor
+    - habilitar logs
