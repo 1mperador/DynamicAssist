@@ -30,6 +30,6 @@ __pycache__/
 .env
 venv/
 rasa_env/
-models/
-note.txt
-log.txt
+# models/
+# note.txt
+# log.txt

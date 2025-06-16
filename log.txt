@@ -1,0 +1,10 @@
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
+/bin/bash: linha 1: /home/leugim/.venv/bin/python3: Arquivo ou diretório inexistente
